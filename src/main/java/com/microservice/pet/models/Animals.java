@@ -1,4 +1,4 @@
-package com.microservice.pet.entity;
+package com.microservice.pet.models;
 
 import java.io.Serializable;
 
@@ -7,11 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 @Entity
-@Table(name = "animals")
-public class AnimalsModel implements Serializable {
+public class Animals implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +18,7 @@ public class AnimalsModel implements Serializable {
 	private String name;
 	private String age;
 	private String race;
-	private Boolean isAdotable;
+	private boolean isAdotable;
 
 	public Long getId() {
 		return id;
